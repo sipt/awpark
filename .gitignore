@@ -1,0 +1,13 @@
+.idea/
+.DS_Store
+bin/
+bazel-*
+*.bak
+templates
+*.html
+temp/
+*.json
+localtest
+/rochat
+vendor
+.output/
