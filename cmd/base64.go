@@ -12,7 +12,7 @@ func init() {
 	Register(&base64Encoder{})
 }
 
-type base64Decoder struct{}
+type base64Decoder struct{ RunModeRun }
 
 func (b *base64Decoder) Use() string {
 	return "base64-decode"
@@ -33,7 +33,7 @@ func (b *base64Decoder) Action(args []string) {
 	}
 }
 
-type base64Encoder struct{}
+type base64Encoder struct{ RunModeRun }
 
 func (b *base64Encoder) Use() string {
 	return "base64-encode"

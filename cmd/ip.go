@@ -12,7 +12,7 @@ func init() {
 	Register(&ipTool{})
 }
 
-type ipTool struct{}
+type ipTool struct{ RunModeRun }
 
 func (b *ipTool) Use() string {
 	return "ip"

@@ -12,7 +12,7 @@ func init() {
 	Register(&jwtDecoder{})
 }
 
-type jwtDecoder struct{}
+type jwtDecoder struct{ RunModeRun }
 
 func (b *jwtDecoder) Use() string {
 	return "jwt-decode"

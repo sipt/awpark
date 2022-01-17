@@ -12,7 +12,7 @@ func init() {
 	Register(&urlEncoder{})
 }
 
-type urlDecoder struct{}
+type urlDecoder struct{ RunModeRun }
 
 func (b *urlDecoder) Use() string {
 	return "url-decode"
@@ -33,7 +33,7 @@ func (b *urlDecoder) Action(args []string) {
 	}
 }
 
-type urlEncoder struct{}
+type urlEncoder struct{ RunModeRun }
 
 func (b *urlEncoder) Use() string {
 	return "url-encode"

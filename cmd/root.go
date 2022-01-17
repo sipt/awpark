@@ -17,12 +17,20 @@ func init() {
 	// so this *will* die in flames if not run in an Alfred-like environment.
 	wf = aw.New()
 	rootCmd.AddCommand(&cobra.Command{
+		Use:   "store",
+		Short: "workflow list",
+		Run:   workflowList,
+	})
+	rootCmd.AddCommand(&cobra.Command{
 		Use:   "list",
 		Short: "list kit",
 		Run: func(cmd *cobra.Command, args []string) {
 			wf.Run(func() {
 				for _, action := range actionMap {
-					action.ActionItem().Var(CmdFlag, action.Use())
+					item := action.ActionItem()
+					if item != nil {
+						item.Var(CmdFlag, action.Use())
+					}
 				}
 				wf.SendFeedback()
 			})
@@ -31,15 +39,21 @@ func init() {
 	rootCmd.AddCommand(&cobra.Command{
 		Use: "exec",
 		Run: func(cmd *cobra.Command, args []string) {
-			wf.Run(func() {
-				cmd := wf.Config.Get(CmdFlag)
-				if len(cmd) == 0 {
-					wf.NewWarningItem("Invalid CMD", fmt.Sprintf("not found [%s] in vars", CmdFlag))
-				} else {
-					actionMap[cmd].Action(args)
+			cmdFlag := wf.Config.Get(CmdFlag)
+			if len(cmdFlag) == 0 {
+				fmt.Printf("not found [%s] in vars", CmdFlag)
+			}
+			if action, ok := actionMap[cmdFlag]; !ok {
+				fmt.Printf("not found [%s] in actions", CmdFlag)
+			} else {
+				switch action.GetRunMode() {
+				case RunMode_Run:
+					wf.Run(func() { action.Action(args) })
+				case RunMode_Backgroud: // TODO
+				case RunMode_None:
+					action.Action(args)
 				}
-				wf.SendFeedback()
-			})
+			}
 		},
 	})
 }
@@ -71,4 +85,25 @@ type Command interface {
 	Use() string
 	ActionItem() *aw.Item
 	Action(args []string)
+	GetRunMode() RunMode
 }
+
+type RunModeRun struct{}
+
+func (d *RunModeRun) GetRunMode() RunMode { return RunMode_Run }
+
+type RunModeNone struct{}
+
+func (d *RunModeNone) GetRunMode() RunMode { return RunMode_None }
+
+type RunModeBackground struct{}
+
+func (d *RunModeBackground) GetRunMode() RunMode { return RunMode_Backgroud }
+
+type RunMode int
+
+const (
+	RunMode_None RunMode = iota
+	RunMode_Run
+	RunMode_Backgroud
+)

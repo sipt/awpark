@@ -14,7 +14,7 @@ func init() {
 	Register(&timestampFormatter{})
 }
 
-type timestampGetter struct{}
+type timestampGetter struct{ RunModeRun }
 
 func (t *timestampGetter) Use() string {
 	return "timestamp-getter"
@@ -32,7 +32,7 @@ func (t *timestampGetter) Action(args []string) {
 	wf.NewItem("Milliseconds: " + milliseconds).Valid(true).Copytext(milliseconds).Arg(milliseconds).Icon(&aw.Icon{Value: "clock.png"})
 }
 
-type timestampFormatter struct{}
+type timestampFormatter struct{ RunModeRun }
 
 func (t *timestampFormatter) Use() string {
 	return "timestamp-formatter"

@@ -13,7 +13,7 @@ func init() {
 	Register(&md5Upper{})
 }
 
-type md5Lower struct{}
+type md5Lower struct{ RunModeRun }
 
 func (b *md5Lower) Use() string {
 	return "md5-lower"
@@ -31,7 +31,7 @@ func (b *md5Lower) Action(args []string) {
 	}
 }
 
-type md5Upper struct{}
+type md5Upper struct{ RunModeRun }
 
 func (b *md5Upper) Use() string {
 	return "md5-upper"
