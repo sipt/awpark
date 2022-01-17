@@ -20,7 +20,7 @@ func (b *md5Lower) Use() string {
 }
 
 func (b *md5Lower) ActionItem() *aw.Item {
-	return wf.NewItem("MD5 Lower").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
+	return wf.NewItem("MD5 Lower").UID("A00000002-1").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
 }
 
 func (b *md5Lower) Action(args []string) {
@@ -38,7 +38,7 @@ func (b *md5Upper) Use() string {
 }
 
 func (b *md5Upper) ActionItem() *aw.Item {
-	return wf.NewItem("MD5 Upper").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
+	return wf.NewItem("MD5 Upper").UID("A00000002-2").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
 }
 
 func (b *md5Upper) Action(args []string) {

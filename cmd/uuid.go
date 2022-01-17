@@ -18,7 +18,7 @@ func (b *uuidGen) Use() string {
 }
 
 func (b *uuidGen) ActionItem() *aw.Item {
-	return wf.NewItem("UUID Generator").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
+	return wf.NewItem("UUID Generator").UID("B00000001-1").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
 }
 
 func (b *uuidGen) Action(args []string) {

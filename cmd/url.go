@@ -19,7 +19,7 @@ func (b *urlDecoder) Use() string {
 }
 
 func (b *urlDecoder) ActionItem() *aw.Item {
-	return wf.NewItem("URL Decode").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
+	return wf.NewItem("URL Decode").UID("A00000003-1").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
 }
 
 func (b *urlDecoder) Action(args []string) {
@@ -40,7 +40,7 @@ func (b *urlEncoder) Use() string {
 }
 
 func (b *urlEncoder) ActionItem() *aw.Item {
-	return wf.NewItem("URL Encode").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
+	return wf.NewItem("URL Encode").UID("A00000003-2").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
 }
 
 func (b *urlEncoder) Action(args []string) {

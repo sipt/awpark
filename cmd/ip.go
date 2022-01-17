@@ -19,7 +19,7 @@ func (b *ipTool) Use() string {
 }
 
 func (b *ipTool) ActionItem() *aw.Item {
-	return wf.NewItem("Show IP Address").Valid(true).Icon(&aw.Icon{Value: "ip.png"})
+	return wf.NewItem("Show IP Address").UID("B00000003-1").Valid(true).Icon(&aw.Icon{Value: "ip.png"})
 }
 
 func (b *ipTool) Action(args []string) {

@@ -1,12 +1,16 @@
 package cmd
 
 import (
+	"crypto/md5"
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
+	"log"
 	"net/url"
 	"os"
 	"os/exec"
 	"strings"
+	"time"
 
 	"github.com/cavaliergopher/grab/v3"
 	"github.com/spf13/cobra"
@@ -18,7 +22,75 @@ var userHomeDir, _ = os.UserHomeDir()
 var searchLimit = 20
 var store = &workflowStore{}
 
-func init() {
+const cacheKey = "awpark-workflows"
+const cacheImagesKey = "awpark-workflows-cache-images"
+
+type workflowItem struct {
+	Name    string   `json:"name"`
+	Icon    string   `json:"icon"`
+	Desc    string   `json:"desc"`
+	Tags    []string `json:"tags"`
+	Url     string   `json:"url"`
+	Author  string   `json:"author"`
+	Version string   `json:"version"`
+	Website string   `json:"website"`
+	Query   string   `json:"query"`
+}
+
+type workflowStore struct {
+	items []*workflowItem
+}
+
+func (w *workflowStore) Search(keywords []string) {
+	err := w.LoadData()
+	if err != nil {
+		wf.NewWarningItem(fmt.Sprintf("Error: %s", err.Error()), "")
+		return
+	}
+	count := 0
+	lowers := make([]string, len(keywords))
+	for i, keyword := range keywords {
+		lowers[i] = strings.ToLower(keyword)
+	}
+	for _, item := range w.items {
+		notFound := false
+		for _, keyword := range lowers {
+			if !strings.Contains(item.Query, keyword) {
+				notFound = true
+				break
+			}
+		}
+		if !notFound {
+			wf.NewItem(item.Name+" @"+item.Author).Subtitle(item.Desc).Icon(&aw.Icon{
+				Value: fmt.Sprintf(wf.Cache.Dir+"/icons/%x", md5.Sum([]byte(item.Icon))),
+			}).Valid(true).Arg(item.Url).Var(CmdFlag, (&downloadFile{}).Use())
+			count += 1
+			if count > searchLimit {
+				return
+			}
+		}
+	}
+}
+
+func (w *workflowStore) LoadData() error {
+	err := wf.Cache.LoadJSON(cacheKey, &w.items)
+	if err != nil {
+		err = w.loadDataRemote()
+		return err
+	}
+	for _, item := range store.items {
+		item.Query = strings.ToLower(item.Name + " " + strings.Join(item.Tags, " "))
+	}
+	duration, _ := wf.Cache.Age(cacheKey)
+	if duration > 10*time.Minute {
+		go w.loadDataRemote()
+	}
+	return nil
+}
+
+func (w *workflowStore) loadDataRemote() error {
+	wg.Add(1)
+	defer wg.Done()
 	store.items = []*workflowItem{}
 	data := `[
     {
@@ -37,7 +109,8 @@ func init() {
         "website": "https://github.com/rhydlewis/search-omnifocus#readme",
         "icon": "https://www.alfredapp.com/media/pages/workflows/macapps/omnifocus.png",
         "name": "OmniFocus",
-        "desc": "Search for your projects, folders and tasks in OmniFocus 3."
+        "desc": "Search for your projects, folders and tasks in OmniFocus 3.",
+		"url":"https://github.com/rhydlewis/search-omnifocus/releases/download/v2.1.3/Search.OmniFocus.v2.1.3.alfredworkflow"
     },
     {
         "website": "https://github.com/core-code/MacUpdater-Alfred-Workflow#readme",
@@ -192,53 +265,52 @@ func init() {
 ]`
 	err := json.Unmarshal([]byte(data), &store.items)
 	if err != nil {
-		panic(err)
+		return err
 	}
 	for _, item := range store.items {
 		item.Query = strings.ToLower(item.Name + " " + strings.Join(item.Tags, " "))
 	}
-}
-
-type workflowItem struct {
-	Name    string   `json:"name"`
-	Icon    string   `json:"icon"`
-	Desc    string   `json:"desc"`
-	Tags    []string `json:"tags"`
-	Url     string   `json:"url"`
-	Author  string   `json:"author"`
-	Version string   `json:"version"`
-	Website string   `json:"website"`
-	Query   string   `json:"query"`
-}
-
-type workflowStore struct {
-	items []*workflowItem
-}
-
-func (w *workflowStore) Search(keywords []string) {
-	count := 0
-	lowers := make([]string, len(keywords))
-	for i, keyword := range keywords {
-		lowers[i] = strings.ToLower(keyword)
+	err = wf.Cache.Store(cacheKey, []byte(data))
+	if err != nil {
+		return err
 	}
+
+	ci := &cacheAllImages{}
+	bgCmd := exec.Command("./awpark", "exec", ci.Use())
+	if !wf.IsRunning(ci.Use()) {
+		log.Printf("[DEBUG] start run in background [%s]\n", bgCmd.String())
+		err := wf.RunInBackground(ci.Use(), bgCmd)
+		if err != nil {
+			log.Printf("[ERROR] run in background failed [%s]:[%s]\n", bgCmd.String(), err.Error())
+		}
+	}
+	return nil
+}
+
+func (w *workflowStore) CacheAllImage() {
+	err := w.LoadData()
+	if err != nil {
+		return
+	}
+
+	log.Printf("[DEBUG] starg cache image \n")
+	wg.Add(len(w.items))
 	for _, item := range w.items {
-		notFound := false
-		for _, keyword := range keywords {
-			if !strings.Contains(item.Query, keyword) {
-				notFound = true
-				break
+		go func(icon string) {
+			file := fmt.Sprintf("%x", md5.Sum([]byte(icon)))
+			localPath := wf.Cache.Dir + "/icons/" + file
+			if _, err := os.Stat(localPath); os.IsNotExist(err) {
+				_, err = grab.Get(localPath, icon)
+				if err != nil {
+					log.Printf("[ERROR] cache image [%s] to [%s] failed[%s]\n", icon, localPath, err.Error())
+				} else {
+					log.Printf("[DEBUG] cache image [%s] to [%s] success\n", icon, localPath)
+				}
 			}
-		}
-		if !notFound {
-			wf.NewItem(item.Name + " @" + item.Author).Subtitle(item.Desc).Icon(&aw.Icon{
-				Value: item.Icon,
-			}).Valid(true)
-			count += 1
-			if count > searchLimit {
-				return
-			}
-		}
+			wg.Done()
+		}(item.Icon)
 	}
+	wg.Wait()
 }
 
 func workflowList(cmd *cobra.Command, args []string) {
@@ -247,18 +319,17 @@ func workflowList(cmd *cobra.Command, args []string) {
 		if len(args) > 0 && len(args[0]) > 0 {
 			urlPlain := args[0]
 			validUrl, err := url.Parse(urlPlain)
-			if err != nil || len(validUrl.Scheme) == 0 || len(validUrl.Host) == 0 || len(validUrl.Path) == 0 {
-				store.Search(args)
+			if err == nil && len(validUrl.Scheme) > 0 && len(validUrl.Host) > 0 && len(validUrl.Path) > 0 {
+				wf.NewItem("Download & Install ...").Valid(true).Arg(urlPlain).Icon(&aw.Icon{Value: "lock.png"}).Var(CmdFlag, (&downloadFile{}).Use())
 				return
 			}
-			wf.NewItem("Download & Install ...").Valid(true).Arg(urlPlain).Icon(&aw.Icon{Value: "lock.png"}).Var(CmdFlag, (&downloadFile{}).Use())
-		} else {
-			wf.NewItem("Download: (please input url)").Valid(false).Icon(&aw.Icon{Value: "lock.png"})
 		}
+		store.Search(args)
 	})
 }
 func init() {
 	Register(&downloadFile{})
+	Register(&cacheAllImages{})
 }
 
 type downloadFile struct{ RunModeNone }
@@ -273,6 +344,7 @@ func (d *downloadFile) ActionItem() *aw.Item {
 
 func (d *downloadFile) Action(args []string) {
 	if len(args) > 0 && len(args[0]) > 0 {
+		log.Printf("[DEBUG] start to download [%s]", args[0])
 		resp, err := grab.Get(userHomeDir+"/Downloads/", args[0])
 		if err != nil {
 			fmt.Printf("Error: %s", err.Error())
@@ -286,4 +358,31 @@ func (d *downloadFile) Action(args []string) {
 		}
 		fmt.Printf("Download success. Wait Install...")
 	}
+}
+
+type cacheAllImages struct{ RunModeNone }
+
+func (d *cacheAllImages) Use() string {
+	return "cache-images"
+}
+
+func (d *cacheAllImages) ActionItem() *aw.Item {
+	return nil
+}
+
+func (d *cacheAllImages) Action(args []string) {
+	store.CacheAllImage()
+}
+
+func copyFile(src, dest string) (err error) {
+	defer func() {
+		if err != nil {
+			log.Printf("[ERROR] copy file failed [%s] to [%s], [%s]", src, dest, err.Error())
+		}
+	}()
+	bytesRead, err := ioutil.ReadFile(src)
+	if err != nil {
+		return err
+	}
+	return ioutil.WriteFile(dest, bytesRead, 0644)
 }

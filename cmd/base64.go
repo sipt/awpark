@@ -19,7 +19,7 @@ func (b *base64Decoder) Use() string {
 }
 
 func (b *base64Decoder) ActionItem() *aw.Item {
-	return wf.NewItem("Base64 Decode").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
+	return wf.NewItem("Base64 Decode").UID("A00000001-1").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
 }
 
 func (b *base64Decoder) Action(args []string) {
@@ -40,7 +40,7 @@ func (b *base64Encoder) Use() string {
 }
 
 func (b *base64Encoder) ActionItem() *aw.Item {
-	return wf.NewItem("Base64 Encode").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
+	return wf.NewItem("Base64 Encode").UID("A00000001-2").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
 }
 
 func (b *base64Encoder) Action(args []string) {

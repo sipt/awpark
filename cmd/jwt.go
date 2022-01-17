@@ -19,7 +19,7 @@ func (b *jwtDecoder) Use() string {
 }
 
 func (b *jwtDecoder) ActionItem() *aw.Item {
-	return wf.NewItem("JWT Decode").Valid(true).Icon(&aw.Icon{Value: "jwt.png"})
+	return wf.NewItem("JWT Decode").UID("B00000002-1").Valid(true).Icon(&aw.Icon{Value: "jwt.png"})
 }
 
 func (b *jwtDecoder) Action(args []string) {

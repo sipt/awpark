@@ -21,7 +21,7 @@ func (t *timestampGetter) Use() string {
 }
 
 func (t *timestampGetter) ActionItem() *aw.Item {
-	return wf.NewItem("Timestamp Getter").Valid(true).Icon(&aw.Icon{Value: "clock.png"})
+	return wf.NewItem("Timestamp Getter").UID("B00000004-1").Valid(true).Icon(&aw.Icon{Value: "clock.png"})
 }
 
 func (t *timestampGetter) Action(args []string) {
@@ -39,7 +39,7 @@ func (t *timestampFormatter) Use() string {
 }
 
 func (t *timestampFormatter) ActionItem() *aw.Item {
-	return wf.NewItem("Timestamp Formatter").Valid(true).Icon(&aw.Icon{Value: "clock.png"})
+	return wf.NewItem("Timestamp Formatter").UID("B00000004-2").Valid(true).Icon(&aw.Icon{Value: "clock.png"})
 }
 
 func (t *timestampFormatter) Action(args []string) {

@@ -2,7 +2,9 @@ package cmd
 
 import (
 	"fmt"
+	"log"
 	"os"
+	"sync"
 
 	"github.com/spf13/cobra"
 
@@ -10,6 +12,8 @@ import (
 )
 
 const CmdFlag = "cmd"
+
+var wg = &sync.WaitGroup{}
 
 func init() {
 	// Create a new Workflow using default settings.
@@ -19,7 +23,10 @@ func init() {
 	rootCmd.AddCommand(&cobra.Command{
 		Use:   "store",
 		Short: "workflow list",
-		Run:   workflowList,
+		Run: func(cmd *cobra.Command, args []string) {
+			workflowList(cmd, args)
+			wg.Wait()
+		},
 	})
 	rootCmd.AddCommand(&cobra.Command{
 		Use:   "list",
@@ -34,6 +41,7 @@ func init() {
 				}
 				wf.SendFeedback()
 			})
+			wg.Wait()
 		},
 	})
 	rootCmd.AddCommand(&cobra.Command{
@@ -41,19 +49,30 @@ func init() {
 		Run: func(cmd *cobra.Command, args []string) {
 			cmdFlag := wf.Config.Get(CmdFlag)
 			if len(cmdFlag) == 0 {
-				fmt.Printf("not found [%s] in vars", CmdFlag)
+				if len(args) == 0 && len(args[0]) == 0 {
+					log.Printf("not found [%s] in vars ant args", CmdFlag)
+				} else {
+					cmdFlag = args[0]
+					args = args[1:]
+				}
 			}
+
+			log.Printf("[DEBUG] %s %v", cmdFlag, args)
 			if action, ok := actionMap[cmdFlag]; !ok {
-				fmt.Printf("not found [%s] in actions", CmdFlag)
+				log.Printf("not found [%s] in actions", cmdFlag)
 			} else {
 				switch action.GetRunMode() {
 				case RunMode_Run:
-					wf.Run(func() { action.Action(args) })
+					wf.Run(func() {
+						action.Action(args)
+						wf.SendFeedback()
+					})
 				case RunMode_Backgroud: // TODO
 				case RunMode_None:
 					action.Action(args)
 				}
 			}
+			wg.Wait()
 		},
 	})
 }
