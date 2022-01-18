@@ -86,17 +86,21 @@ func (w *workflowStore) LoadData() error {
 	}
 	duration, _ := wf.Cache.Age(cacheKey)
 	if duration > 10*time.Minute {
-		ci := &refreshCacheWorkflows{}
-		bgCmd := exec.Command("./awpark", "exec", ci.Use())
-		if !wf.IsRunning(ci.Use()) {
-			log.Printf("[DEBUG] start run in background [%s]\n", bgCmd.String())
-			err := wf.RunInBackground(ci.Use(), bgCmd)
-			if err != nil {
-				log.Printf("[ERROR] run in background failed [%s]:[%s]\n", bgCmd.String(), err.Error())
-			}
-		}
+		w.loadDataRemoteInBg()
 	}
 	return nil
+}
+
+func (w *workflowStore) loadDataRemoteInBg() {
+	ci := &refreshCacheWorkflows{}
+	bgCmd := exec.Command("./awpark", "exec", ci.Use())
+	if !wf.IsRunning(ci.Use()) {
+		log.Printf("[DEBUG] start run in background [%s]\n", bgCmd.String())
+		err := wf.RunInBackground(ci.Use(), bgCmd)
+		if err != nil {
+			log.Printf("[ERROR] run in background failed [%s]:[%s]\n", bgCmd.String(), err.Error())
+		}
+	}
 }
 
 func (w *workflowStore) initData() error {
@@ -132,6 +136,7 @@ func (w *workflowStore) loadDataRemote() error {
 	}
 	err = json.Unmarshal(data, &store.items)
 	if err != nil {
+		log.Printf("[ERROR] decode remoteData failed [%s]\n", err.Error())
 		return err
 	}
 	for _, item := range store.items {

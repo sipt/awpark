@@ -6,7 +6,6 @@ bazel-*
 templates
 *.html
 temp/
-*.json
 localtest
 /rochat
 vendor

@@ -1,0 +1,223 @@
+[
+  {
+    "website": "http://alfred-spotify-mini-player.com/",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/macapps/spotify.png",
+    "name": "Spotify Mini Player",
+    "desc": "The Mini Player gives you control over the Spotify app on your Mac. Find albums, search for artists & play songs to groove to.",
+    "url": "https://github.com/vdesabou/alfred-spotify-mini-player/releases/latest/download/spotifyminiplayer.alfredworkflow",
+    "author": "vdesabou"
+  },
+  {
+    "website": "https://github.com/Kapeli/Dash-Alfred-Workflow",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/macapps/dash.png",
+    "name": "Dash",
+    "desc": "Add blisteringly fast search of the Dash documentation / API browser app, with in-line results and responsive integration.",
+    "author": "Kapeli"
+  },
+  {
+    "website": "https://github.com/rhydlewis/search-omnifocus",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/macapps/omnifocus.png",
+    "name": "OmniFocus",
+    "desc": "Search for your projects, folders and tasks in OmniFocus 3.",
+    "url": "https://github.com/rhydlewis/search-omnifocus/releases/download/v2.1.3/Search.OmniFocus.v2.1.3.alfredworkflow",
+    "author": "rhydlewis"
+  },
+  {
+    "website": "https://github.com/core-code/MacUpdater-Alfred-Workflow",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/macapps/macupdater.png",
+    "name": "MacUpdater",
+    "desc": "Keep your Mac software up to date effortlessly.",
+    "author": "core-code",
+    "url": "https://github.com/core-code/MacUpdater-Alfred-Workflow/latest/download/MacUpdater.alfredworkflow"
+  },
+  {
+    "website": "http://www.packal.org/workflow/transmit",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/macapps/transmit.png",
+    "name": "Transmit",
+    "desc": "Search and open Favorites in the Transmit 4 FTP client.",
+    "author": "ramiroaraujo",
+    "url": "https://github.com/packal/repository/raw/master/com.tumblr.ramiroaraujo.alfred-transmit-workflow/alfred-transmit.alfredworkflow"
+  },
+  {
+    "website": "http://www.packal.org/workflow/launch-url-3-browsers",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/handy/launch-in-3-browsers.png",
+    "name": "Launch a URL in 3 browsers",
+    "desc": "Launch a URL in three browsers (Safari, Chrome and Firefox) to speed up website testing.",
+    "author": "Vero",
+    "url": "https://github.com/packal/repository/raw/master/com.alfredapp.vero.3browsers/launch_in_3_browsers.alfredworkflow"
+  },
+  {
+    "website": "http://www.packal.org/workflow/lastpass-cli-workflow-alfred",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/macapps/lastpass.png",
+    "name": "LastPass",
+    "desc": "Search for your logins saved in the LastPass password manager.",
+    "author": "StuartCRyan",
+    "url": "https://github.com/packal/repository/raw/master/com.stuartryan.alfred.lastpass/lastpass-cli-alfred-workflow.alfredworkflow"
+  },
+  {
+    "website": "https://www.apptorium.com/sidenotes/articles/alfred-workflow",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/macapps/sidenotes.png",
+    "name": "SideNotes",
+    "desc": "Create new notes, folders, and search your existing SideNotes.",
+    "author": "Apptorium",
+    "url": "https://cdn.apptorium.com/products/sidenotes/extras/SideNotes.alfredworkflow"
+  },
+  {
+    "website": "https://www.alfredapp.com/help/workflows/templates/#suggest",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/google.png",
+    "name": "Google Suggest",
+    "author": "alfredapp",
+    "desc": "An example included in Alfred: Search Google from Alfred's search box and see results in-line."
+  },
+  {
+    "website": "https://github.com/deanishe/alfred-stackexchange",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/stackoverflow.png",
+    "name": "Stack Exchange",
+    "desc": "Search for answers to your programming questions on Stack Overflow.",
+    "author": "deanishe",
+    "url": "https://github.com/deanishe/alfred-stackexchange/releases/download/v2.0.1/StackExchange-Search-2.0.1.alfred4workflow"
+  },
+  {
+    "website": "https://github.com/edgarjs/alfred-github-repos",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/github.png",
+    "name": "GitHub",
+    "desc": "Quickly pick which GitHub repository you want to open and launch it from Alfred.",
+    "author": "edgarjs",
+    "url": "https://github.com/edgarjs/alfred-github-repos/releases/download/3.1.3/gh-repos-3.1.3.alfredworkflow"
+  },
+  {
+    "website": "https://github.com/deanishe/alfred-reddit",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/reddit.png",
+    "name": "Reddit",
+    "desc": "Browse and search Reddit directories (subreddits), and search hot results within a subreddit.",
+    "author": "deanishe",
+    "url": "https://github.com/deanishe/alfred-reddit/releases/download/v1.8.1/Reddit-1.8.1.alfred3workflow"
+  },
+  {
+    "website": "https://github.com/alfredapp/google-drive-workflow",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/googledrive.png",
+    "name": "Google Drive",
+    "desc": "List File Stream contents from Google Drive.",
+    "author": "alfredapp",
+    "url": "https://github.com/alfredapp/google-drive-workflow/releases/latest/download/Google.Drive.alfredworkflow"
+  },
+  {
+    "website": "https://github.com/alfredapp/tinypng-workflow",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/tinypng.png",
+    "name": "TinyPNG",
+    "desc": "Optimise your images to be more lightweight with TinyPNG",
+    "author": "alfredapp",
+    "url": "https://github.com/alfredapp/tinypng-workflow/releases/latest/download/TinyPNG.alfredworkflow"
+  },
+  {
+    "website": "https://www.alfredapp.com/help/workflows/templates/#suggest",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/amazon.png",
+    "name": "Amazon Suggest",
+    "author": "alfredapp",
+    "desc": "An example included in Alfred: Search Amazon from Alfred's search box and see results in-line."
+  },
+  {
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/PinPlus",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/pinboard.png",
+    "name": "PinPlus",
+    "desc": "Add and view your Pinboard Bookmarks.",
+    "author": "vitorgalvao",
+    "url": "https://github.com/vitorgalvao/alfred-workflows/blob/master/PinPlus/PinPlus.alfredworkflow"
+  },
+  {
+    "website": "https://github.com/tmcknight/Movie-and-TV-Show-Search-Alfred-Workflow",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/movieandtv.png",
+    "name": "Movie & TV Show Search",
+    "desc": "Search for a movie or TV show, and get a few ratings.",
+    "author": "tmcknight",
+    "url": "https://github.com/tmcknight/Movie-and-TV-Show-Search-Alfred-Workflow/releases/latest/download/Movie.and.TV.Show.Search.alfredworkflow"
+  },
+  {
+    "website": "https://github.com/clarencecastillo/alfred-powerthesaurus",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/powerthesaurus.jpg",
+    "name": "Power Thesaurus",
+    "desc": "Search in-line for synonyms and antonyms on Power Thesaurus.",
+    "author": "clarencecastillo",
+    "url": "https://github.com/clarencecastillo/alfred-powerthesaurus/releases/download/v2.1.3/PowerThesaurus-2.1.3.alfredworkflow"
+  },
+  {
+    "website": "https://github.com/mdreizin/chrome-bookmarks-alfred-workflow",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/chromium.png",
+    "name": "Chromium Bookmarks",
+    "desc": "Search for your browser bookmarks in Chrome, Chromium, Edge and Vivaldi.",
+    "author": "mdreizin",
+    "url": "https://github.com/mdreizin/chrome-bookmarks-alfred-workflow/releases/latest/download/chrome-bookmarks.alfredworkflow"
+  },
+  {
+    "website": "https://github.com/stuartcryan/advanced-google-maps-alfred-workflow",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/websites/googlemaps.png",
+    "name": "Advanced Maps",
+    "desc": "Advanced Google and Apple Maps search, including the ability to configure a Home and Work location, to see Google traffic reports before travelling.",
+    "author": "stuartcryan",
+    "url": "https://github.com/stuartcryan/advanced-google-maps-alfred-workflow/releases/latest/download/Advanced_Google_Maps_Search.alfredworkflow"
+  },
+  {
+    "website": "https://github.com/deanishe/alfred-convert",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/handy/convert.png",
+    "name": "Convert",
+    "desc": "Convert between different units of quantities, distances, time and more. No internet connection required.",
+    "author": "deanishe",
+    "url": "https://github.com/deanishe/alfred-convert/releases/download/v3.7.1/Convert-3.7.1.alfred4workflow"
+  },
+  {
+    "website": "https://github.com/deanishe/alfred-smartfolders",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/handy/smart-folders.png",
+    "name": "Smart Folders",
+    "desc": "View and explore your Smart Folders.",
+    "author": "deanishe",
+    "url": "https://github.com/deanishe/alfred-smartfolders/releases/download/v3.0.0/Smart-Folders-3.0.alfred4workflow"
+  },
+  {
+    "website": "https://github.com/jaroslawhartman/TimeZones-Alfred",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/handy/timezones.png",
+    "name": "Timezones",
+    "desc": "A customised world clock — shows a list of user-configured cities with the current local times.",
+    "author": "jaroslawhartman",
+    "url": "https://github.com/jaroslawhartman/TimeZones-Alfred/releases/latest/download/TimeZones.alfredworkflow"
+  },
+  {
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/CoffeeCoffee",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/handy/coffeecoffee.png",
+    "name": "CoffeeCoffee",
+    "desc": "Prevent your Mac from going to sleep indefinitely or for a set amount of time.",
+    "author": "vitorgalvao",
+    "url": "https://github.com/vitorgalvao/alfred-workflows/blob/master/CoffeeCoffee/CoffeeCoffee.alfredworkflow"
+  },
+  {
+    "website": "https://github.com/shmulvad/alfred-nightshift",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/handy/nightshift.png",
+    "name": "NightShift",
+    "desc": "Save your eyes by turning macOS's Night Shift feature on and off quickly.",
+    "author": "shmulvad",
+    "url": "https://github.com/shmulvad/alfred-nightshift/releases/latest/download/NightShift.alfredworkflow"
+  },
+  {
+    "website": "https://github.com/alfredapp/magic-8-ball-workflow",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/handy/magic-8ball.png",
+    "name": "Magic 8 Ball",
+    "desc": "Let the Magic 8 Ball answer your important questions.",
+    "author": "alfredapp",
+    "url": "https://github.com/alfredapp/magic-8-ball-workflow/releases/latest/download/Magic.8.Ball.alfredworkflow"
+  },
+  {
+    "website": "http://www.packal.org/workflow/wi-fi",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/handy/wi-fi.png",
+    "name": "Wi-Fi On/Off",
+    "desc": "Set your Mac's Wi-Fi function to On or Off.",
+    "author": "gs3",
+    "url": "https://github.com/packal/repository/raw/master/com.ravelll.wifi/wi-fi.alfredworkflow"
+  },
+  {
+    "website": "http://www.packal.org/workflow/caffeinate-control",
+    "icon": "https://www.alfredapp.com/media/pages/workflows/handy/caffeinate-control.png",
+    "name": "Caffeinate Control",
+    "desc": "Controls \"caffeinate\" — system command to prevent the sleep function.",
+    "url": "https://github.com/packal/repository/raw/master/com.shawn.patrick.rice.caffeinate.control/caffeinate_control.alfredworkflow",
+    "author": "Shawn Patrick Rice"
+  }
+]
