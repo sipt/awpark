@@ -28,7 +28,7 @@ func (b *base64Decoder) Action(args []string) {
 		if err != nil {
 			wf.NewItem(fmt.Sprintf("Error: %s", err.Error()))
 		} else {
-			wf.NewItem("Plain: " + string(plain)).Valid(true).Copytext(string(plain)).Arg(string(plain)).Icon(&aw.Icon{Value: "lock.png"})
+			wf.NewItem("Plain: " + string(plain)).Valid(true).Copytext(string(plain)).Arg(string(plain)).Icon(&aw.Icon{Value: "lock.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 		}
 	}
 }
@@ -46,6 +46,6 @@ func (b *base64Encoder) ActionItem() *aw.Item {
 func (b *base64Encoder) Action(args []string) {
 	if len(args) > 0 && len(args[0]) > 0 {
 		plain := base64.RawStdEncoding.EncodeToString([]byte(args[0]))
-		wf.NewItem("Base64: " + plain).Valid(true).Copytext(plain).Arg(plain).Icon(&aw.Icon{Value: "lock.png"})
+		wf.NewItem("Base64: " + plain).Valid(true).Copytext(plain).Arg(plain).Icon(&aw.Icon{Value: "lock.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 	}
 }

@@ -33,14 +33,14 @@ func (b *jwtDecoder) Action(args []string) {
 		if err != nil {
 			wf.NewItem(fmt.Sprintf("Error: %s", err.Error()))
 		} else {
-			wf.NewItem("Header: " + string(plain)).Valid(true).Copytext(string(plain)).Arg(string(plain)).Icon(&aw.Icon{Value: "jwt.png"})
+			wf.NewItem("Header: " + string(plain)).Valid(true).Copytext(string(plain)).Arg(string(plain)).Icon(&aw.Icon{Value: "jwt.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 		}
 		// header
 		plain, err = base64.RawStdEncoding.DecodeString(subStrs[1])
 		if err != nil {
 			wf.NewItem(fmt.Sprintf("Error: %s", err.Error()))
 		} else {
-			wf.NewItem("Payload: " + string(plain)).Valid(true).Copytext(string(plain)).Arg(string(plain)).Icon(&aw.Icon{Value: "jwt.png"})
+			wf.NewItem("Payload: " + string(plain)).Valid(true).Copytext(string(plain)).Arg(string(plain)).Icon(&aw.Icon{Value: "jwt.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 		}
 	}
 }

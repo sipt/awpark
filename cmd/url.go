@@ -28,7 +28,7 @@ func (b *urlDecoder) Action(args []string) {
 		if err != nil {
 			wf.NewItem(fmt.Sprintf("Error: %s", err.Error()))
 		} else {
-			wf.NewItem("URL Unescape: " + plain).Valid(true).Copytext(plain).Arg(plain).Icon(&aw.Icon{Value: "lock.png"})
+			wf.NewItem("URL Unescape: " + plain).Valid(true).Copytext(plain).Arg(plain).Icon(&aw.Icon{Value: "lock.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 		}
 	}
 }
@@ -46,6 +46,6 @@ func (b *urlEncoder) ActionItem() *aw.Item {
 func (b *urlEncoder) Action(args []string) {
 	if len(args) > 0 && len(args[0]) > 0 {
 		value := url.QueryEscape(args[0])
-		wf.NewItem("URL Escape: " + value).Valid(true).Copytext(value).Arg(value).Icon(&aw.Icon{Value: "lock.png"})
+		wf.NewItem("URL Escape: " + value).Valid(true).Copytext(value).Arg(value).Icon(&aw.Icon{Value: "lock.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 	}
 }

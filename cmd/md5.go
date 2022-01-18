@@ -27,7 +27,7 @@ func (b *md5Lower) Action(args []string) {
 	if len(args) > 0 && len(args[0]) > 0 {
 		data := md5.Sum([]byte(args[0]))
 		str := strings.ToLower(fmt.Sprintf("%x", data))
-		wf.NewItem("MD5: " + str).Valid(true).Copytext(str).Arg(str).Icon(&aw.Icon{Value: "lock.png"})
+		wf.NewItem("MD5: " + str).Valid(true).Copytext(str).Arg(str).Icon(&aw.Icon{Value: "lock.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 	}
 }
 
@@ -38,7 +38,7 @@ func (b *md5Upper) Use() string {
 }
 
 func (b *md5Upper) ActionItem() *aw.Item {
-	return wf.NewItem("MD5 Upper").UID("A00000002-2").Valid(true).Icon(&aw.Icon{Value: "lock.png"})
+	return wf.NewItem("MD5 Upper").UID("A00000002-2").Valid(true).Icon(&aw.Icon{Value: "lock.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 }
 
 func (b *md5Upper) Action(args []string) {

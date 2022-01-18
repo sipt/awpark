@@ -27,7 +27,7 @@ func (b *ipTool) Action(args []string) {
 	if err != nil {
 		wf.NewWarningItem("Local IP ", err.Error())
 	} else {
-		wf.NewItem("Local IP: " + localIp).Valid(true).Copytext(localIp).Arg(localIp).Icon(&aw.Icon{Value: "ip.png"})
+		wf.NewItem("Local IP: " + localIp).Valid(true).Copytext(localIp).Arg(localIp).Icon(&aw.Icon{Value: "ip.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 	}
 	resp, err := http.Get("http://icanhazip.com")
 	var data []byte
@@ -41,7 +41,7 @@ func (b *ipTool) Action(args []string) {
 		if len(data) > 0 && data[len(data)-1] == '\n' {
 			data = data[:len(data)-1]
 		}
-		wf.NewItem("External IP: " + string(data)).Valid(true).Copytext(string(data)).Arg(string(data)).Icon(&aw.Icon{Value: "ip.png"})
+		wf.NewItem("External IP: " + string(data)).Valid(true).Copytext(string(data)).Arg(string(data)).Icon(&aw.Icon{Value: "ip.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 	}
 }
 

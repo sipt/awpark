@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	aw "github.com/deanishe/awgo"
-
 	"github.com/hashicorp/go-version"
+
+	aw "github.com/deanishe/awgo"
 )
 
 const CacheVersionKey = "awpark-version"

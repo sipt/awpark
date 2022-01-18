@@ -29,7 +29,7 @@ func (t *timestampGetter) Action(args []string) {
 	seconds := fmt.Sprintf("%d", now.Unix())
 	milliseconds := fmt.Sprintf("%d", now.UnixNano()/int64(time.Millisecond))
 	wf.NewItem("Seconds: " + seconds).Valid(true).Copytext(seconds).Arg(seconds).Icon(&aw.Icon{Value: "clock.png"})
-	wf.NewItem("Milliseconds: " + milliseconds).Valid(true).Copytext(milliseconds).Arg(milliseconds).Icon(&aw.Icon{Value: "clock.png"})
+	wf.NewItem("Milliseconds: " + milliseconds).Valid(true).Copytext(milliseconds).Arg(milliseconds).Icon(&aw.Icon{Value: "clock.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 }
 
 type timestampFormatter struct{ RunModeRun }
@@ -68,6 +68,6 @@ func (t *timestampFormatter) Action(args []string) {
 			return
 		}
 		formatted := inputTime.Format(time.RFC3339)
-		wf.NewItem("Formatted: " + formatted).Valid(true).Copytext(formatted).Arg(formatted).Icon(&aw.Icon{Value: "clock.png"})
+		wf.NewItem("Formatted: " + formatted).Valid(true).Copytext(formatted).Arg(formatted).Icon(&aw.Icon{Value: "clock.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 	}
 }

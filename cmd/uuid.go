@@ -23,5 +23,5 @@ func (b *uuidGen) ActionItem() *aw.Item {
 
 func (b *uuidGen) Action(args []string) {
 	plain := u.String()
-	wf.NewItem("UUID: " + plain).Valid(true).Copytext(plain).Arg(plain).Icon(&aw.Icon{Value: "lock.png"})
+	wf.NewItem("UUID: " + plain).Valid(true).Copytext(plain).Arg(plain).Icon(&aw.Icon{Value: "lock.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 }
