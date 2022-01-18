@@ -14,7 +14,7 @@ import (
 )
 
 const CacheVersionKey = "awpark-version"
-const UpgradeUrl = "https://github.com/TTNomi/awpark/releases/latest/download/awpark.alfredworkflow"
+const UpgradeUrl = "https://github.com/TTNomi/awpark/releases/latest/download/AWPark.alfredworkflow"
 
 var vm = new(versionManager)
 
