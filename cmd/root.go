@@ -24,6 +24,10 @@ func init() {
 		Use:   "store",
 		Short: "workflow list",
 		Run: func(cmd *cobra.Command, args []string) {
+			if NeedUpgrade() {
+				wf.SendFeedback()
+				return
+			}
 			workflowList(cmd, args)
 			wg.Wait()
 		},
@@ -33,6 +37,10 @@ func init() {
 		Short: "list kit",
 		Run: func(cmd *cobra.Command, args []string) {
 			wf.Run(func() {
+				if NeedUpgrade() {
+					wf.SendFeedback()
+					return
+				}
 				for _, action := range actionMap {
 					item := action.ActionItem()
 					if item != nil {
@@ -55,6 +63,10 @@ func init() {
 					cmdFlag = args[0]
 					args = args[1:]
 				}
+			}
+			if cmdFlag != new(downloadFile).Use() && NeedUpgrade() {
+				wf.SendFeedback()
+				return
 			}
 
 			log.Printf("[DEBUG] %s %v", cmdFlag, args)

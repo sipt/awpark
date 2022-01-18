@@ -8,6 +8,42 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>08D8CD01-26CC-4E5D-8205-D1E386934549</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CBB514B8-8DAC-4A39-A919-0A7CF418305E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6697664C-D131-4366-AD3A-7C4298FE6E9F</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open website</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>31F4618F-6685-4C05-8F42-7C65C86B280E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>94206B8F-1E83-4A20-8376-656783D89019</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>570EE86F-1AE9-4ECE-92B1-0A2528A207B0</key>
 		<array>
 			<dict>
@@ -25,7 +61,79 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>CD3ECD71-FF1C-4DF7-BC56-2B007F9C9D6F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CBB514B8-8DAC-4A39-A919-0A7CF418305E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>31F4618F-6685-4C05-8F42-7C65C86B280E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>CDA2E7B0-298A-4B50-9244-5D43AC6AD234</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>62A3CCFF-C147-4110-B2A9-88023662B517</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>CDA2E7B0-298A-4B50-9244-5D43AC6AD234</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6697664C-D131-4366-AD3A-7C4298FE6E9F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CD3ECD71-FF1C-4DF7-BC56-2B007F9C9D6F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
 				<string>570EE86F-1AE9-4ECE-92B1-0A2528A207B0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>D23FDA00-1F4C-417A-BBA1-0F7B30F0D3C2</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>31F4618F-6685-4C05-8F42-7C65C86B280E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>62A3CCFF-C147-4110-B2A9-88023662B517</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -45,6 +153,55 @@
 	<string>AWPark</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>pk</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./awpark list</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Kit Park</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>ADD18F93-9146-46E7-A83A-D967A34D431F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -95,8 +252,101 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>23A3882A-D4C0-4C4C-A3D4-E084A1D7D0FE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:upgrade}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>1</integer>
+						<key>matchstring</key>
+						<string>true</string>
+						<key>outputlabel</key>
+						<string></string>
+						<key>uid</key>
+						<string>D23FDA00-1F4C-417A-BBA1-0F7B30F0D3C2</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>CD3ECD71-FF1C-4DF7-BC56-2B007F9C9D6F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+./awpark exec $query</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>31F4618F-6685-4C05-8F42-7C65C86B280E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
 				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>94206B8F-1E83-4A20-8376-656783D89019</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -108,7 +358,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>pk</string>
+				<string>wf</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -120,7 +370,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./awpark list</string>
+				<string>./awpark store {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -137,30 +387,86 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>ADD18F93-9146-46E7-A83A-D967A34D431F</string>
+			<string>08D8CD01-26CC-4E5D-8205-D1E386934549</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{query}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>''</string>
+						<key>outputlabel</key>
+						<string></string>
+						<key>uid</key>
+						<string>CDA2E7B0-298A-4B50-9244-5D43AC6AD234</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>23A3882A-D4C0-4C4C-A3D4-E084A1D7D0FE</string>
+			<string>CBB514B8-8DAC-4A39-A919-0A7CF418305E</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>{var:title}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>62A3CCFF-C147-4110-B2A9-88023662B517</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{var:website}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>6697664C-D131-4366-AD3A-7C4298FE6E9F</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Development kit.
+	<string>Alfred Workflows Store.
+Search &amp; One click to install.
+
+Development kit.
 * Base64 Encode/Decode
 * MD5 Lower/Upper
 * URL Encode/Decode
@@ -168,19 +474,54 @@
 * JWT Decode</string>
 	<key>uidata</key>
 	<dict>
+		<key>08D8CD01-26CC-4E5D-8205-D1E386934549</key>
+		<dict>
+			<key>xpos</key>
+			<integer>85</integer>
+			<key>ypos</key>
+			<integer>220</integer>
+		</dict>
 		<key>23A3882A-D4C0-4C4C-A3D4-E084A1D7D0FE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<integer>720</integer>
 			<key>ypos</key>
-			<integer>45</integer>
+			<integer>50</integer>
+		</dict>
+		<key>31F4618F-6685-4C05-8F42-7C65C86B280E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>520</integer>
+			<key>ypos</key>
+			<integer>210</integer>
 		</dict>
 		<key>570EE86F-1AE9-4ECE-92B1-0A2528A207B0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>295</integer>
+			<integer>515</integer>
 			<key>ypos</key>
-			<integer>45</integer>
+			<integer>50</integer>
+		</dict>
+		<key>62A3CCFF-C147-4110-B2A9-88023662B517</key>
+		<dict>
+			<key>xpos</key>
+			<integer>525</integer>
+			<key>ypos</key>
+			<integer>345</integer>
+		</dict>
+		<key>6697664C-D131-4366-AD3A-7C4298FE6E9F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>525</integer>
+			<key>ypos</key>
+			<integer>485</integer>
+		</dict>
+		<key>94206B8F-1E83-4A20-8376-656783D89019</key>
+		<dict>
+			<key>xpos</key>
+			<integer>715</integer>
+			<key>ypos</key>
+			<integer>210</integer>
 		</dict>
 		<key>ADD18F93-9146-46E7-A83A-D967A34D431F</key>
 		<dict>
@@ -189,10 +530,24 @@
 			<key>ypos</key>
 			<integer>45</integer>
 		</dict>
+		<key>CBB514B8-8DAC-4A39-A919-0A7CF418305E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>320</integer>
+			<key>ypos</key>
+			<integer>240</integer>
+		</dict>
+		<key>CD3ECD71-FF1C-4DF7-BC56-2B007F9C9D6F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>265</integer>
+			<key>ypos</key>
+			<integer>65</integer>
+		</dict>
 	</dict>
 	<key>version</key>
 	<string>1.0</string>
 	<key>webaddress</key>
-	<string>https://www.alfredapp.com</string>
+	<string>https://github.com/TTNomi/awpark</string>
 </dict>
 </plist>

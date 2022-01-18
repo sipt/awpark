@@ -66,7 +66,7 @@ func (w *workflowStore) Search(keywords []string) {
 			wf.NewItem(item.Name+" @"+item.Author).Subtitle(item.Desc).Icon(&aw.Icon{
 				Value: fmt.Sprintf(wf.Cache.Dir+"/icons/%x", md5.Sum([]byte(item.Icon))),
 			}).Valid(true).Var("title", fmt.Sprintf("Downloading [%s]", item.Name)).
-				Arg(item.Url).Var(CmdFlag, (&downloadFile{}).Use())
+				Arg(item.Url).Var(CmdFlag, (&downloadFile{}).Use()).Var("website", item.Website)
 			count += 1
 			if count > searchLimit {
 				return
@@ -78,7 +78,7 @@ func (w *workflowStore) Search(keywords []string) {
 func (w *workflowStore) LoadData() error {
 	err := wf.Cache.LoadJSON(cacheKey, &w.items)
 	if err != nil {
-		err = w.loadDataRemote()
+		err = w.initData()
 		return err
 	}
 	for _, item := range store.items {
@@ -89,18 +89,6 @@ func (w *workflowStore) LoadData() error {
 		w.loadDataRemoteInBg()
 	}
 	return nil
-}
-
-func (w *workflowStore) loadDataRemoteInBg() {
-	ci := &refreshCacheWorkflows{}
-	bgCmd := exec.Command("./awpark", "exec", ci.Use())
-	if !wf.IsRunning(ci.Use()) {
-		log.Printf("[DEBUG] start run in background [%s]\n", bgCmd.String())
-		err := wf.RunInBackground(ci.Use(), bgCmd)
-		if err != nil {
-			log.Printf("[ERROR] run in background failed [%s]:[%s]\n", bgCmd.String(), err.Error())
-		}
-	}
 }
 
 func (w *workflowStore) initData() error {
@@ -115,8 +103,27 @@ func (w *workflowStore) initData() error {
 		for _, item := range store.items {
 			item.Query = strings.ToLower(item.Name + " " + strings.Join(item.Tags, " "))
 		}
+
+		err = wf.Cache.Store(cacheKey, data)
+		if err != nil {
+			return err
+		}
+		w.CacheAllImageInBg("local-cache-images")
 	}
-	return w.loadDataRemote()
+	w.loadDataRemoteInBg()
+	return nil
+}
+
+func (w *workflowStore) loadDataRemoteInBg() {
+	ci := &refreshCacheWorkflows{}
+	bgCmd := exec.Command("./awpark", "exec", ci.Use())
+	if !wf.IsRunning(ci.Use()) {
+		log.Printf("[DEBUG] start run in background [%s]\n", bgCmd.String())
+		err := wf.RunInBackground(ci.Use(), bgCmd)
+		if err != nil {
+			log.Printf("[ERROR] run in background failed [%s]:[%s]\n", bgCmd.String(), err.Error())
+		}
+	}
 }
 
 func (w *workflowStore) loadDataRemote() error {
@@ -146,17 +153,23 @@ func (w *workflowStore) loadDataRemote() error {
 	if err != nil {
 		return err
 	}
+	w.CacheAllImageInBg("")
+	return nil
+}
 
+func (w *workflowStore) CacheAllImageInBg(jobName string) {
 	ci := &cacheAllImages{}
+	if jobName == "" {
+		jobName = ci.Use()
+	}
 	bgCmd := exec.Command("./awpark", "exec", ci.Use())
-	if !wf.IsRunning(ci.Use()) {
+	if !wf.IsRunning(jobName) {
 		log.Printf("[DEBUG] start run in background [%s]\n", bgCmd.String())
-		err := wf.RunInBackground(ci.Use(), bgCmd)
+		err := wf.RunInBackground(jobName, bgCmd)
 		if err != nil {
 			log.Printf("[ERROR] run in background failed [%s]:[%s]\n", bgCmd.String(), err.Error())
 		}
 	}
-	return nil
 }
 
 func (w *workflowStore) CacheAllImage() {
