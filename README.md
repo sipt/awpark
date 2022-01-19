@@ -10,6 +10,7 @@ Default keyword: `wf`
 
 * Input [Enter] : Download & Install; (Open workflow's website if url is empty)
 * Input [Cmd + Enter] : Open workflow's website.
+* Input [Cmd + C] : Copy target URL to the clipboard.
 
 ## Develop Kit
 Default keyword: `kit`
