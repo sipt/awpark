@@ -28,6 +28,7 @@ const localDataFile = "workflows.json"
 const remoteDataUrl = "https://raw.githubusercontent.com/TTNomi/awpark/main/static/workflows.json"
 
 type workflowItem struct {
+	Uid     string   `json:"uid"`
 	Name    string   `json:"name"`
 	Icon    string   `json:"icon"`
 	Desc    string   `json:"desc"`
@@ -37,6 +38,10 @@ type workflowItem struct {
 	Version string   `json:"version"`
 	Website string   `json:"website"`
 	Query   string   `json:"query"`
+}
+
+func (w *workflowItem) MakeQuery() {
+	w.Query = strings.ToLower(w.Name + " " + w.Author + " " + strings.Join(w.Tags, " "))
 }
 
 type workflowStore struct {
@@ -63,10 +68,14 @@ func (w *workflowStore) Search(keywords []string) {
 			}
 		}
 		if !notFound {
+			text := item.Url
+			if len(text) == 0 {
+				text = item.Website
+			}
 			wf.NewItem(item.Name+" @"+item.Author).Subtitle(item.Desc).Icon(&aw.Icon{
 				Value: fmt.Sprintf(wf.Cache.Dir+"/icons/%x", md5.Sum([]byte(item.Icon))),
 			}).Valid(true).Var("title", fmt.Sprintf("Downloading [%s]", item.Name)).
-				Arg(item.Url).Var(CmdFlag, (&downloadFile{}).Use()).Var("website", item.Website)
+				Arg(item.Url).Var(CmdFlag, (&downloadFile{}).Use()).Var("website", item.Website).Copytext(text)
 			count += 1
 			if count > searchLimit {
 				return
@@ -82,7 +91,7 @@ func (w *workflowStore) LoadData() error {
 		return err
 	}
 	for _, item := range store.items {
-		item.Query = strings.ToLower(item.Name + " " + strings.Join(item.Tags, " "))
+		item.MakeQuery()
 	}
 	duration, _ := wf.Cache.Age(cacheKey)
 	if duration > 10*time.Minute {
@@ -101,7 +110,7 @@ func (w *workflowStore) initData() error {
 			log.Printf("[ERROR] load local backup data failed [%s]", err.Error())
 		}
 		for _, item := range store.items {
-			item.Query = strings.ToLower(item.Name + " " + strings.Join(item.Tags, " "))
+			item.MakeQuery()
 		}
 
 		err = wf.Cache.Store(cacheKey, data)
@@ -147,9 +156,9 @@ func (w *workflowStore) loadDataRemote() error {
 		return err
 	}
 	for _, item := range store.items {
-		item.Query = strings.ToLower(item.Name + " " + strings.Join(item.Tags, " "))
+		item.MakeQuery()
 	}
-	err = wf.Cache.Store(cacheKey, []byte(data))
+	err = wf.Cache.Store(cacheKey, data)
 	if err != nil {
 		return err
 	}
