@@ -4,7 +4,7 @@ Alfred Workflow for engineer.
 ## Alfred Workflow Store
 Search and install [Workflows.json](/static/workflows.json)
 
-Default keyword: [**wf**]
+Default keyword: `wf`
 
 ![workflows store](docs/alfred-workflow-store.png)
 
@@ -12,7 +12,7 @@ Default keyword: [**wf**]
 * Input [Cmd + Enter] : Open workflow's website.
 
 ## Develop Kit
-Default keyword: [**kit**]
+Default keyword: `kit`
 
 ![develop kit](docs/alfred-workflow-kit.png)
 
