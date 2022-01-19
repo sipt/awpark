@@ -219,5 +219,45 @@
     "desc": "Controls \"caffeinate\" — system command to prevent the sleep function.",
     "url": "https://github.com/packal/repository/raw/master/com.shawn.patrick.rice.caffeinate.control/caffeinate_control.alfredworkflow",
     "author": "Shawn Patrick Rice"
+  },
+  {
+    "website": "https://github.com/deanishe/alfred-fakeum",
+    "icon": "https://github.com/deanishe/alfred-fakeum/raw/master/src/icons/icon.png",
+    "name": "Fakeum",
+    "desc": "Generate fake test data in Alfred for testing. Based on Faker.",
+    "url": "https://github.com/deanishe/alfred-fakeum/releases/download/v2.2.2/Fakeum-2.2.2.alfredworkflow",
+    "author": "deanishe"
+  },
+  {
+    "website": "https://github.com/lukewaite/alfred-gitlab",
+    "icon": "https://github.com/lukewaite/alfred-gitlab/raw/master/src/icon.png",
+    "name": "Gitlab",
+    "desc": "Quickly navigate to GitLab projects in Alfred 3.",
+    "url": "https://github.com/lukewaite/alfred-gitlab/releases/latest/download/GitLab.alfredworkflow",
+    "author": "lukewaite"
+  },
+  {
+    "website": "https://github.com/ngreenstein/alfred-process-killer",
+    "icon": "https://github.com/ngreenstein/alfred-process-killer/raw/master/stop-icon.png",
+    "name": "Kill Process",
+    "desc": "Kill Process is an Alfred 2 workflow that makes it easy to kill misbehaving processes. It is, in essence, a way to easily find processes by name and kill them using kill -9.",
+    "url": "https://github.com/ngreenstein/alfred-process-killer/raw/master/Kill%20Process.alfredworkflow",
+    "author": "ngreenstein"
+  },
+  {
+    "website": "https://github.com/BigLuck/alfred2-hash",
+    "icon": "https://github.com/bigluck/alfred2-hash/raw/master/icon.png",
+    "name": "Hash",
+    "desc": "A simple Alfred 2 hash workflow's.",
+    "url": "https://github.com/bigluck/alfred2-hash/raw/master/Hash.alfredworkflow",
+    "author": "BigLuck"
+  },
+  {
+    "website": "https://github.com/whyliam/whyliam.workflows.youdao",
+    "icon": "https://github.com/whyliam/whyliam.workflows.youdao/raw/master/icon.png",
+    "name": "Youdao",
+    "desc": "有道翻译",
+    "url": "https://github.com/whyliam/whyliam.workflows.youdao/releases/latest/download/whyliam.workflows.youdao.alfredworkflow",
+    "author": "whyliam"
   }
 ]
