@@ -107,7 +107,7 @@ var actionMap = make(map[string]Command)
 
 func Register(cmd Command) {
 	if _, ok := actionMap[cmd.Use()]; ok {
-		panic(fmt.Sprintf("%s: is duplicate"))
+		panic(fmt.Sprintf("%s: is duplicate", cmd.Use()))
 	}
 	actionMap[cmd.Use()] = cmd
 }
