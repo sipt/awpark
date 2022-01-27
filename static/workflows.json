@@ -14350,5 +14350,429 @@
     "author": "StudSeth",
     "version": "1.1",
     "website": "https://github.com/scarstens/alfred-workflow-jira-search-utilities"
+  },
+  {
+    "name": "AlfredBookmarklet",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/AlfredBookmarklet/source/icon.png",
+    "desc": "Use a browser bookmarklet via Alfred",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/AlfredBookmarklet",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/AlfredBookmarklet/AlfredBookmarklet.alfredworkflow"
+  },
+  {
+    "name": "AlfredModeration",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/AlfredModeration/source/icon.png",
+    "desc": "Tools to help moderate the Alfred forums",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/AlfredModeration",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/AlfredModeration/AlfredModeration.alfredworkflow"
+  },
+  {
+    "name": "AppFreeze",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/AppFreeze/source/icon.png",
+    "desc": "Pauses and resumes execution of the frontmost app",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/AppFreeze",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/AppFreeze/AppFreeze.alfredworkflow"
+  },
+  {
+    "name": "BugNot",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/BugNot/source/icon.png",
+    "desc": "Get logins from bugmenot",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/BugNot",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/BugNot/BugNot.alfredworkflow"
+  },
+  {
+    "name": "CalmNotifications",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/CalmNotifications/source/icon.png",
+    "desc": "Toggle Do Not Disturb",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/CalmNotifications",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/CalmNotifications/CalmNotifications.alfredworkflow"
+  },
+  {
+    "name": "CardSearch",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/CardSearch/source/icon.png",
+    "desc": "Search for trading card game cards",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/CardSearch",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/CardSearch/CardSearch.alfredworkflow"
+  },
+  {
+    "name": "CoffeeCoffee",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/CoffeeCoffee/source/icon.png",
+    "desc": "Prevent your computer from going to sleep",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/CoffeeCoffee",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/CoffeeCoffee/CoffeeCoffee.alfredworkflow"
+  },
+  {
+    "name": "DeleteConfig",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/DeleteConfig/source/icon.png",
+    "desc": "Find settings and preferences to delete",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/DeleteConfig",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/DeleteConfig/DeleteConfig.alfredworkflow"
+  },
+  {
+    "name": "DenteAzul",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/DenteAzul/source/icon.png",
+    "desc": "Toggle bluetooth and paired device connectivity",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/DenteAzul",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/DenteAzul/DenteAzul.alfredworkflow"
+  },
+  {
+    "name": "DownMedia",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/DownMedia/source/icon.png",
+    "desc": "Download media from popular sources",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/DownMedia",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/DownMedia/DownMedia.alfredworkflow"
+  },
+  {
+    "name": "FormatSize",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/FormatSize/source/icon.png",
+    "desc": "Reference paper sizes and device resolutions",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/FormatSize",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/FormatSize/FormatSize.alfredworkflow"
+  },
+  {
+    "name": "HackerBoard",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/HackerBoard/source/icon.png",
+    "desc": "Front page news from web community sources",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/HackerBoard",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/HackerBoard/HackerBoard.alfredworkflow"
+  },
+  {
+    "name": "IncognitoClone",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/IncognitoClone/source/icon.png",
+    "desc": "Opens Chrome’s frontmost tab in an incognito window",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/IncognitoClone",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/IncognitoClone/IncognitoClone.alfredworkflow"
+  },
+  {
+    "name": "KeyCodes",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/KeyCodes/source/icon.png",
+    "desc": "Translate keyboard keys to AppleScript key codes",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/KeyCodes",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/KeyCodes/KeyCodes.alfredworkflow"
+  },
+  {
+    "name": "LabelColor",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/LabelColor/source/icon.png",
+    "desc": "Sets a label color for selected files and directories",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/LabelColor",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/LabelColor/LabelColor.alfredworkflow"
+  },
+  {
+    "name": "LinkClean",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/LinkClean/source/icon.png",
+    "desc": "Removes extraneous information from URLs",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/LinkClean",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/LinkClean/LinkClean.alfredworkflow"
+  },
+  {
+    "name": "MachineClean",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/MachineClean/source/icon.png",
+    "desc": "Lock your keyboard temporarily, so you can clean it",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/MachineClean",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/MachineClean/MachineClean.alfredworkflow"
+  },
+  {
+    "name": "MarkdownTransform",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/MarkdownTransform/source/icon.png",
+    "desc": "Convert Markdown to other formats",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/MarkdownTransform",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/MarkdownTransform/MarkdownTransform.alfredworkflow"
+  },
+  {
+    "name": "MediaCoordinates",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/MediaCoordinates/source/icon.png",
+    "desc": "Open media GPS coordinates in a map",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/MediaCoordinates",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/MediaCoordinates/MediaCoordinates.alfredworkflow"
+  },
+  {
+    "name": "MediaThorn",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/MediaThorn/source/icon.png",
+    "desc": "Get ratings for different types of media",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/MediaThorn",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/MediaThorn/MediaThorn.alfredworkflow"
+  },
+  {
+    "name": "NewPath",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/NewPath/source/icon.png",
+    "desc": "Creates a new file in the current Finder directory",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/NewPath",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/NewPath/NewPath.alfredworkflow"
+  },
+  {
+    "name": "NoteTaker",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/NoteTaker/source/icon.png",
+    "desc": "Keep small bits of text",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/NoteTaker",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/NoteTaker/NoteTaker.alfredworkflow"
+  },
+  {
+    "name": "OneUpdater",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/OneUpdater/source/icon.png",
+    "desc": "Update workflows with a single node",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/OneUpdater/OneUpdater.alfredworkflow"
+  },
+  {
+    "name": "OpenActions",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/OpenActions/source/icon.png",
+    "desc": "Granular control over opening apps",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/OpenActions",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/OpenActions/OpenActions.alfredworkflow"
+  },
+  {
+    "name": "PlayAddress",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/PlayAddress/source/icon.png",
+    "desc": "Play the URL in the frontmost browser or clipboard",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/PlayAddress",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/PlayAddress/PlayAddress.alfredworkflow"
+  },
+  {
+    "name": "PingPong",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/PingPong/source/icon.png",
+    "desc": "Play a round of table tennis with Alfred",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/PingPong",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/PingPong/PingPong.alfredworkflow"
+  },
+  {
+    "name": "PinPlus",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/PinPlus/source/icon.png",
+    "desc": "Interact with your Pinboard bookmarks",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/PinPlus",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/PinPlus/PinPlus.alfredworkflow"
+  },
+  {
+    "name": "ProcessControl",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/ProcessControl/source/icon.png",
+    "desc": "Deal with misbehaving processes",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/ProcessControl",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/ProcessControl/ProcessControl.alfredworkflow"
+  },
+  {
+    "name": "QuitArena",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/QuitArena/source/icon.png",
+    "desc": "Quit all apps, with exceptions",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/QuitArena",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/QuitArena/QuitArena.alfredworkflow"
+  },
+  {
+    "name": "RecentlyAdded",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RecentlyAdded/source/icon.png",
+    "desc": "List directory contents by added date",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/RecentlyAdded",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RecentlyAdded/RecentlyAdded.alfredworkflow"
+  },
+  {
+    "name": "RecommendationNation",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RecommendationNation/source/icon.png",
+    "desc": "Keep a contextual list of recommendations",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/RecommendationNation",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RecommendationNation/RecommendationNation.alfredworkflow"
+  },
+  {
+    "name": "RemoveQuarantine",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RemoveQuarantine/source/icon.png",
+    "desc": "Remove the quarantine attribute from your apps",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/RemoveQuarantine",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RemoveQuarantine/RemoveQuarantine.alfredworkflow"
+  },
+  {
+    "name": "RenameAction",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RenameAction/source/icon.png",
+    "desc": "Renames a directory or file (preserving the extension)",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/RenameAction",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RenameAction/RenameAction.alfredworkflow"
+  },
+  {
+    "name": "RespondQuickly",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RespondQuickly/source/icon.png",
+    "desc": "Convert selected text to a QR code",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/RespondQuickly",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RespondQuickly/RespondQuickly.alfredworkflow"
+  },
+  {
+    "name": "RightClick",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RightClick/source/icon.png",
+    "desc": "Do a right-click on Finder files, with the keyboard",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/RightClick",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RightClick/RightClick.alfredworkflow"
+  },
+  {
+    "name": "RunCommand",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RunCommand/source/icon.png",
+    "desc": "Run shell commands without opening a terminal",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/RunCommand",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/RunCommand/RunCommand.alfredworkflow"
+  },
+  {
+    "name": "SandwichTimer",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/SandwichTimer/source/icon.png",
+    "desc": "Run pomodoros and other timers",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/SandwichTimer",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/SandwichTimer/SandwichTimer.alfredworkflow"
+  },
+  {
+    "name": "SequentialPaste",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/SequentialPaste/source/icon.png",
+    "desc": "Paste previous clipboard entries in order",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/SequentialPaste",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/SequentialPaste/SequentialPaste.alfredworkflow"
+  },
+  {
+    "name": "ShortFilms",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/ShortFilms/source/icon.png",
+    "desc": "Stream from a selection of short films",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/ShortFilms",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/ShortFilms/ShortFilms.alfredworkflow"
+  },
+  {
+    "name": "StartRecording",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/StartRecording/source/icon.png",
+    "desc": "Shortcuts for recording from your computer",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/StartRecording",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/StartRecording/StartRecording.alfredworkflow"
+  },
+  {
+    "name": "ShutdownTimer",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/ShutdownTimer/source/icon.png",
+    "desc": "Shutdown macOS on a timer",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/ShutdownTimer",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/ShutdownTimer/ShutdownTimer.alfredworkflow"
+  },
+  {
+    "name": "StrongPassword",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/StrongPassword/source/icon.png",
+    "desc": "Get a strong password by leveraging multiple sources",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/StrongPassword",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/StrongPassword/StrongPassword.alfredworkflow"
+  },
+  {
+    "name": "SwitchAgent",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/SwitchAgent/source/icon.png",
+    "desc": "Switch the user agent for your frontmost browser",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/SwitchAgent",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/SwitchAgent/SwitchAgent.alfredworkflow"
+  },
+  {
+    "name": "SynAnt",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/SynAnt/source/icon.png",
+    "desc": "Substitute words by checking against a thesaurus",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/SynAnt",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/SynAnt/SynAnt.alfredworkflow"
+  },
+  {
+    "name": "TemplatesManager",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/TemplatesManager/source/icon.png",
+    "desc": "Save and reuse files, directory structures, and urls",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/TemplatesManager",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/TemplatesManager/TemplatesManager.alfredworkflow"
+  },
+  {
+    "name": "TemporaryEmail",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/TemporaryEmail/source/icon.png",
+    "desc": "Get a temporary email inbox",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/TemporaryEmail",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/TemporaryEmail/TemporaryEmail.alfredworkflow"
+  },
+  {
+    "name": "TrialSounds",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/TrialSounds/source/icon.png",
+    "desc": "Listen to /System/Library/Sounds",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/TrialSounds",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/TrialSounds/TrialSounds.alfredworkflow"
+  },
+  {
+    "name": "TurnShoot",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/TurnShoot/source/icon.png",
+    "desc": "A two-player game for Alfred",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/TurnShoot",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/TurnShoot/TurnShoot.alfredworkflow"
+  },
+  {
+    "name": "UploadFile",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/UploadFile/source/icon.png",
+    "desc": "Upload files and directories for easy sharing",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/UploadFile",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/UploadFile/UploadFile.alfredworkflow"
+  },
+  {
+    "name": "VideoDuration",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/VideoDuration/source/icon.png",
+    "desc": "Outputs the url of a video on a supported website with its duration in square brackets",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/VideoDuration",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/VideoDuration/VideoDuration.alfredworkflow"
+  },
+  {
+    "name": "WatchList",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/WatchList/source/icon.png",
+    "desc": "Play and manage local media and streams",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/WatchList",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/WatchList/WatchList.alfredworkflow"
+  },
+  {
+    "name": "WebScreenshot",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/WebScreenshot/source/icon.png",
+    "desc": "Take screenshots directly to the web",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/WebScreenshot",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/WebScreenshot/WebScreenshot.alfredworkflow"
+  },
+  {
+    "name": "WordsWith",
+    "icon": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/WordsWith/source/icon.png",
+    "desc": "Find words that contain a particular pattern",
+    "author": "vitorgalvao",
+    "website": "https://github.com/vitorgalvao/alfred-workflows/tree/master/WordsWith",
+    "url": "https://raw.githubusercontent.com/vitorgalvao/alfred-workflows/master/WordsWith/WordsWith.alfredworkflow"
   }
 ]
