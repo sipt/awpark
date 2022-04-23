@@ -24,7 +24,7 @@ func (b *base64Decoder) ActionItem() *aw.Item {
 
 func (b *base64Decoder) Action(args []string) {
 	if len(args) > 0 && len(args[0]) > 0 {
-		plain, err := base64.RawStdEncoding.DecodeString(args[0])
+		plain, err := base64.StdEncoding.DecodeString(args[0])
 		if err != nil {
 			wf.NewItem(fmt.Sprintf("Error: %s", err.Error()))
 		} else {
@@ -45,7 +45,7 @@ func (b *base64Encoder) ActionItem() *aw.Item {
 
 func (b *base64Encoder) Action(args []string) {
 	if len(args) > 0 && len(args[0]) > 0 {
-		plain := base64.RawStdEncoding.EncodeToString([]byte(args[0]))
+		plain := base64.StdEncoding.EncodeToString([]byte(args[0]))
 		wf.NewItem("Base64: " + plain).Valid(true).Copytext(plain).Arg(plain).Icon(&aw.Icon{Value: "lock.png"}).Subtitle("Press [Enter], copy to the clipboard.")
 	}
 }
