@@ -82,6 +82,11 @@ func (w *workflowStore) Search(keywords []string) {
 			}
 		}
 	}
+	if count == 0 {
+		wf.NewWarningItem("NotFound", "keyword: "+strings.Join(keywords, " ")).Icon(&aw.Icon{
+			Value: "/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AlertStopIcon.icns",
+		})
+	}
 }
 
 func (w *workflowStore) LoadData() error {
