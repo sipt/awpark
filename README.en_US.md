@@ -2,18 +2,18 @@
 
 ![](https://img.shields.io/badge/license-MIT-green)  ![](https://img.shields.io/badge/platform-MacOS-purple) ![](https://img.shields.io/badge/language-Go-blue)
 
-Alfred Workflow for engineer.
+Dedicated to creating an Alfred Workflow Store that integrates commonly used tools for developers.
 
 ## Alfred Workflow Store
-Search and install [Workflows.json](/static/workflows.json)
+The Alfred Workflow Store allows users to search for target workflows using keywords such as name, author, or tags, and install them with a single click. Currently, there are over 1,000 workflows available for download, all of which are included in the [Workflows.json](/static/workflows.json) file.
 
 Default keyword: `wf`
 
 ![workflows store](docs/alfred-workflow-store.png)
 
-* Input [Enter] : Download & Install; (Open workflow's website if url is empty)
-* Input [Cmd + Enter] : Open workflow's website.
-* Input [Cmd + C] : Copy target URL to the clipboard.
+* Pressing [Enter]: initiates a background download, and upon completion, an Alfred prompt will appear to import the workflow. Click "Import" to complete the installation.
+* Pressing [Cmd + Enter]: opens the workflow's homepage.
+* Pressing [Cmd + C]: copies the workflow download link.
 
 ## Develop Kit
 Default keyword: `kit`
